@@ -53,7 +53,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 900px;
-
 }
 
 .inp {
@@ -75,11 +74,10 @@ body {
 .ind_l {
   margin-left: 8%;
 }
+
 .ind_xl {
   margin-left: 15%;
   line-height: 2rem !important;
-  /* margin-bottom: 0 !important; */
-
 }
 
 .mu {
@@ -186,7 +184,7 @@ a:focus  {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
   
 .blue {
@@ -202,7 +200,6 @@ a:focus  {
   color: #ec4e3e;
 }
 
-
 .section-border {
   border-top: 2px solid #e0e0e0;
   width: 100%;
@@ -210,3 +207,19 @@ a:focus  {
   padding-top: 0.6rem;
 }
 
+@media only screen and (max-width: 760px) {
+  .inp-wr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .ind_xl {
+    margin: 2% 0;
+    font-size: 2em;
+    line-height: 2rem !important; 
+  }
+}

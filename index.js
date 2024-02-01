@@ -5,6 +5,11 @@ const Status = {
   IN_PROGRESS: 'In Progress',
   DONE: 'Done',
 }
+const Default = {
+  VELOCITY: 40,
+  PTS: 40,
+  HARDENING: 2,
+}
 
 let VELOCITY = 40;
 let PTS = 40;
@@ -29,6 +34,20 @@ const handlePts = e => {
 
 const handleHardening = e => {
   HARDENING = parseInt(e.value, 10);
+  localStorage.setItem('HARDENING', HARDENING);
+  fetchData();
+}
+
+const setDefault = e => {
+  e.preventDefault();
+  VELOCITY = Default.VELOCITY;
+  PTS = Default.PTS;
+  HARDENING = Default.HARDENING;
+  document.getElementById('js-velocity').value = VELOCITY;
+  document.getElementById('js-pts').value = PTS;
+  document.getElementById('js-hardening').value = HARDENING;
+  localStorage.setItem('VELOCITY', VELOCITY);
+  localStorage.setItem('PTS', PTS);
   localStorage.setItem('HARDENING', HARDENING);
   fetchData();
 }
@@ -102,6 +121,15 @@ const renderSummary = list => {
 
   document.getElementById('js-eta').innerHTML = `"${etaDate}"`;
   document.getElementById('js-progress').innerHTML = `<span class='font_lm red'>${progress}%</span> (${completedPts}/${totalPts} pts)`;
+
+  
+  if (Default.VELOCITY === VELOCITY && Default.PTS === PTS && Default.HARDENING === HARDENING) {
+    console.log("here")
+      document.getElementById('js-default-link').classList.add('hidden');
+
+  }
+    else 
+    document.getElementById('js-default-link').classList.remove('hidden');
 
 }
 
