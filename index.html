@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  	<meta name="description" content="Danbies Project Project Tracker">
+    <title>Danbies - Project Progress</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="./css/float-grid.css" rel="stylesheet" type="text/css" />
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- <header role='banner' class='banner'>
+      <div class='row'> 
+        <div id='js-main' class='col-12'>
+          <section id='js-top-link' class="top al_left"><a id='js-login-link' href>Sign In</a></section>
+          <p class='font_el ind_l mg_top'><span id='js-name-main'></span>Looking for</BR>Software Engineer Jobs?</p>
+          <p class='font_m ind_l mg_top'>Please drop your resume here</p>
+          <button type="submit" class="btn_black ind_l">Start Here</button>
+          <div class='mg_top'></div> 
+        </div>
+      </div>
+    </header> -->
+      
+    <main class='main_bg' role='main'>
+      <div class='row'> 
+        <div class='col-12'>
+          <p class='font_el ind_l mg_top'><span id='js-name-main'></span>Danbies Team!</p>
+          <!-- <p class='font_l ind_l'>MVP Tracking</p> -->
+          <!-- <button type="submit" class="btn_black ind_l">Start Here</button> -->
+          <p class='font_m ind_xl mg_top'><BR/>현재 MVP 진행상황은 <span id='js-progress'></span>입니다. </p>
+          <p class='font_m ind_xl mg_top'>이 진행속도로는 <span id='js-eta' class='mu'></span>에 종료됩니다. </p>
+
+          <!-- <div class=""> -->
+            <!-- <div class="form"> -->
+              <div class='font_m ind_l'>Assumption:</div>
+              <!-- <form method="post">
+                  <fieldset name="signup">
+                                     -->
+              <div class="inp-wr">
+                <div>
+                  <label for="js-velocity">Expected Velocity (Default: 40pts)</br></label>
+                  <input value="40" onchange="handleVelocity(this)" type="number" name="username" id="js-velocity" class="inp" min="10" max="100" autocomplete="off" required />
+                </div>
+                <div>
+                  <label for="js-pts">Points per Epic (Default: 40pts)</br></label>
+                  <input value="40" onchange="handlePts(this)" type="number" name="fname" id="js-pts" class="inp" min="10" max="100" autocomplete="off" required />  
+                </div>
+                <div>
+                  <label for="js-hardening">Hardening Weeks (Default: 2wks)</br></label>
+                  <input value="2" onchange="handleHardening(this)" type="number" name="lname" id="js-hardening" class="inp" min="0" max="12" autocomplete="off" required />
+  
+                </div>
+              </div>
+                  <!-- </fieldset>
+                  <button type="submit" class="button inp">Sign up</button>
+              </form> -->
+              <!-- <div> -->
+
+          <!-- </div> -->
+
+          <section id='js-list' class='' role='regional' aria-live='polite'>
+            <p id='js-list-title' class='font_l ind_l float'>Status by Epics</p>
+            <a id='js-all-list-link' class='clr link_bot' href>Go to Your list ></a>
+            <p class="line_sp"></p> <!--exptra line space-->
+            <ul id='js-ul' class='al_center' aria-live='polite'>
+              <li class='li_main'>
+                <div class='w2 col-mid title'>Epic</div>
+                <div class='w3 title'>Title</div>
+                <div class='w1 col-end title'>Completed</div>
+                <div class='w1 title'>Total Pts</div>
+                <div class='w1 col-end title'>%</div>
+                <div class='w2 col-mid title'>Status</div>
+              
+              </li>
+            </ul>
+            
+            <div id='js-demo-note' class='ind_l line_sp'>* Note to Harvey : Please add <span class='red-bold'>`mvp`</span> label to the epics to appear in this list</div>
+            <p class="mg_top"></p> 
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="./index.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script>
+    <script type="text/javascript" src="./js/render.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script> -->
+
+  </body>
+</html>
