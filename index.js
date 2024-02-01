@@ -8,12 +8,12 @@ const Status = {
 const Default = {
   VELOCITY: 40,
   PTS: 40,
-  HARDENING: 2,
+  HARDENING: 0,
 }
 
 let VELOCITY = 40;
 let PTS = 40;
-let HARDENING = 2;
+let HARDENING = 0;
 
 const FEAT = 'FEAT';
 
