@@ -82,7 +82,7 @@ body {
 
 .mu {
   font-size: 2rem;
-  background-image: url(/img/mark-underline.svg);
+  background-image: url(../img/mark-underline.svg);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: contain;
