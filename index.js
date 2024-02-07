@@ -28,8 +28,18 @@ const handleVelocity = e => {
 const handlePts = e => {
   PTS = parseInt(e.value, 10);
   localStorage.setItem('PTS', PTS);
-
   fetchData();
+}
+
+const getUpdatedDate = () => {
+  const now = new Date();
+  const updatedDate = new Date();
+  updatedDate.setDate(new Date().getDate() - 1);
+  return updatedDate.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });  
 }
 
 const handleHardening = e => {
@@ -212,6 +222,8 @@ const fetchData = async () => {
 
 const main = async () => {
   checkLocalStorage();
+  // document.getElementById('js-updated').appendChild(`<span>hello</span>`);
+  document.getElementById('js-updated').textContent = getUpdatedDate();
   fetchData();
 }
 
