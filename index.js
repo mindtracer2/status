@@ -15,7 +15,7 @@ let VELOCITY = 40;
 let PTS = 40;
 let HARDENING = 0;
 
-const FEAT = 'FEAT';
+const FEAT = 'Epic';
 
 const BASE_URL = 'https://phillydev.atlassian.net/browse/';
 
@@ -134,9 +134,7 @@ const renderSummary = list => {
 
   
   if (Default.VELOCITY === VELOCITY && Default.PTS === PTS && Default.HARDENING === HARDENING) {
-    console.log("here")
       document.getElementById('js-default-link').classList.add('hidden');
-
   }
     else 
     document.getElementById('js-default-link').classList.remove('hidden');
@@ -145,9 +143,9 @@ const renderSummary = list => {
 
 const renderList = data => {
   const features = data.reduce((acc, cur) => {
-    return cur.type === FEAT && cur.labels.includes('mvp') ? {...acc, [cur.key]: {...cur, donePoint: 0, totalPoint: 0, doneCnt: 0, totalCnt: 0}} : acc;    
+    return cur.type === FEAT && cur.labels.includes('MVP') ? {...acc, [cur.key]: {...cur, donePoint: 0, totalPoint: 0, doneCnt: 0, totalCnt: 0}} : acc;    
   }, {})
-
+  
   data.forEach(issue => {
     const feature = features[issue.parent];
     const point = issue.point || 0;
@@ -160,6 +158,8 @@ const renderList = data => {
         if (feature.status !== Status.DONE) {
           feature.status = Status.IN_PROGRESS;
         }          
+      } else if (issue.status !== Status.TO_DO) {
+        feature.status = Status.IN_PROGRESS;
       }
     }
   });
