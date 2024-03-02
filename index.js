@@ -120,7 +120,7 @@ const renderSummary = list => {
 
   const eta = new Date();
   eta.setDate(new Date().getDate() + remainingDays);
-  const daysUntilNextWed = (3 - eta.getDay() + 7) % 7;  
+  const daysUntilNextWed = (2 - eta.getDay() + 7) % 7;  
   eta.setDate(eta.getDate() + daysUntilNextWed);
 
   const etaDate = eta.toLocaleDateString('ko-KR', {
