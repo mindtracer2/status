@@ -166,7 +166,7 @@ const renderList = data => {
 
   const featList = Object.keys(features).map(key => {
     const issue = features[key];
-    const updatedTotalPoint = issue.totalPoint < 40 ? PTS : issue.totalPoint;
+    const updatedTotalPoint = issue.totalPoint < 35 ? PTS : issue.totalPoint;
     const progress = parseInt(issue.donePoint / updatedTotalPoint * 100, 10);
     const statusElem = `<div class='status' style='background: linear-gradient(to right, lightblue ${progress}%, transparent ${progress}%);'><span class='status-text'>${issue.status}</span></div>`;
     
