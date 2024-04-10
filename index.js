@@ -164,6 +164,25 @@ const renderList = data => {
     }
   });
 
+  console.log("ak:", features)
+
+  const HR_SUM = {
+    "key": "CARRYOVER",
+    "type": "Epic",
+    "title": "Previous completed points from HR-Project",
+    "labels": [
+        "MVP"
+    ],
+    "point": null,
+    "status": "In Progress",
+    "donePoint": 143,
+    "totalPoint": 143,
+    "doneCnt": 40,
+    "totalCnt": 40
+  };
+
+  features['HR_SUM'] = HR_SUM;
+
   const featList = Object.keys(features).map(key => {
     const issue = features[key];
     const updatedTotalPoint = issue.totalPoint < 35 ? PTS : issue.totalPoint;
