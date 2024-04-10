@@ -6,7 +6,7 @@ const Status = {
   DONE: 'Done',
 }
 const Default = {
-  VELOCITY: 40,
+  VELOCITY: 25,
   PTS: 40,
   HARDENING: 0,
 }
